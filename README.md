@@ -1,4 +1,4 @@
-# 🌿 AirWatch Tunisia
+# AirWatch Tunisia
 ### Satellite-Based Industrial Pollution Monitoring | EcoWave 2.0 Hackathon
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
@@ -12,7 +12,7 @@ When a critical anomaly is detected, nearby residents receive real-time SMS aler
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Tunisia's industrial zones — Gabès (chemical complex), Sfax, Bizerte, Gafsa (phosphate) — emit
 significant levels of NO₂ and SO₂. Traditional monitoring networks are sparse, expensive,
@@ -21,7 +21,7 @@ available satellite imagery and ML-based anomaly detection.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 airwatch-tunisia/
@@ -48,7 +48,7 @@ airwatch-tunisia/
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
 Sentinel-5P (NO2/SO2)
@@ -73,7 +73,7 @@ Sentinel-5P (NO2/SO2)
 
 ---
 
-## 🤖 AI Models
+## AI Models
 
 | Model             | Type           | Features                        | Goal                          |
 |-------------------|----------------|---------------------------------|-------------------------------|
@@ -83,7 +83,7 @@ Sentinel-5P (NO2/SO2)
 
 ---
 
-## 🛰️ Data Sources
+## Data Sources
 
 | Source        | GEE Collection                          | Resolution | Use                    |
 |---------------|-----------------------------------------|------------|------------------------|
@@ -95,7 +95,7 @@ Sentinel-5P (NO2/SO2)
 
 ---
 
-## 🚨 WHO Thresholds Used
+## WHO Thresholds Used
 
 | Pollutant | Daily Threshold | Critical Threshold |
 |-----------|----------------|-------------------|
@@ -104,7 +104,7 @@ Sentinel-5P (NO2/SO2)
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone & create virtual environment
 
@@ -154,7 +154,7 @@ earthengine authenticate
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Option A — Full daily pipeline
 
@@ -176,7 +176,6 @@ python main.py --date 2025-06-15  # Analyze a specific date
 streamlit run dashboard.py
 ```
 
-Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ### Option C — Modular execution
 
@@ -193,7 +192,7 @@ print(alerts)
 
 ---
 
-## 🌍 Monitored Zones (6)
+## Monitored Zones (6)
 
 | Zone ID               | Region            | Main Industry          |
 |-----------------------|-------------------|------------------------|
@@ -206,9 +205,9 @@ print(alerts)
 
 ---
 
-## 📲 SMS Alert System
+## SMS Alert System
 
-When an anomaly is detected, Twilio sends geo-targeted SMS alerts to residents
+When an anomaly is detected, Twilio sends automatically geo-targeted SMS alerts to residents
 within a configurable radius (default: 5 km) of the affected zone.
 
 Example SMS:
@@ -225,7 +224,7 @@ Info: airwatch-tn.gov.tn
 
 ---
 
-## 🧪 Demo Mode
+## Demo Mode 
 
 No API keys? No problem. Run with full simulation:
 - Realistic synthetic Sentinel-5P data (seasonal trends + ~5% random anomaly spikes)
@@ -235,24 +234,10 @@ No API keys? No problem. Run with full simulation:
 
 ---
 
-## 🎯 EcoWave 2.0 Alignment
-
-| Criterion       | Implementation                                              |
-|-----------------|-------------------------------------------------------------|
-| Real problem    | Industrial pollution in Tunisia (Gabès, Sfax, Gafsa...)    |
-| Satellite data  | Sentinel-5P + Sentinel-2 (ESA Copernicus, open access)      |
-| Measurable impact | Exposed population, NDVI degradation, residential proximity |
-| Scalability     | Add zones via GeoJSON; multi-country extension possible     |
-| SDGs            | SDG 3 (Health), SDG 11 (Cities), SDG 13 (Climate)          |
-
----
 
 ## ⚠️ Security Notice
 
-- **Never commit** your `.env` file (it is in `.gitignore`)
-- **Never hardcode** API keys or tokens in source files
 - Rotate credentials regularly
-- For production: use a secrets manager (AWS Secrets Manager, HashiCorp Vault, etc.)
 
 ---
 
@@ -260,9 +245,4 @@ No API keys? No problem. Run with full simulation:
 
 MIT License — free to use, modify, and distribute.
 
----
 
-## 👥 Team | EcoWave 2.0 Hackathon
-
-Built for the **IEEE EcoWave 2.0** hackathon.
-Contact: airwatch-tunisia@ieee.org
