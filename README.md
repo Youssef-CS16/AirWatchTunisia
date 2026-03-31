@@ -109,7 +109,7 @@ Sentinel-5P (NO2/SO2)
 ### 1. Clone & create virtual environment
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/airwatch-tunisia.git
+git clone https://github.com/Youssef-CS16/airwatch-tunisia.git
 cd airwatch-tunisia
 python -m venv venv
 source venv/bin/activate        # Linux/macOS
