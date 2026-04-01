@@ -9,12 +9,6 @@ Runs the full monitoring pipeline once per day:
   5. Run Sentinel-2 fine analysis on alerted zones
   6. Train LSTM + generate 7-day risk forecasts
   7. Generate AI reports for critical zones
-
-Usage:
-  python main.py                        # Run for today
-  python main.py --force-refresh        # Re-download all satellite data
-  python main.py --force-retrain        # Retrain all ML models
-  python main.py --date 2025-06-15      # Analyse a specific date
 """
 
 import sys
