@@ -56,8 +56,8 @@ Sentinel-5P (NO2/SO2)
         ▼
   Data Collection  ──► Isolation Forest ──► Anomaly Detected?
   (daily, 6 zones)       (unsupervised)           │
-                                              YES  │  NO
-                                                   ▼
+                                              YES │  NO
+                                                  ▼
                                          Sentinel-2 Analysis
                                          (spatial, NDVI, population)
                                                    │
@@ -109,7 +109,7 @@ Sentinel-5P (NO2/SO2)
 ### 1. Clone & create virtual environment
 
 ```bash
-git clone https://github.com/Youssef-CS16/airwatch-tunisia.git
+git clone https://github.com/YoussefKossentini/airwatch-tunisia.git
 cd airwatch-tunisia
 python -m venv venv
 source venv/bin/activate        # Linux/macOS
