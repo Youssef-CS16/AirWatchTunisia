@@ -1,4 +1,4 @@
-# 🔐 Environment Variables Setup
+# Environment Variables Setup
 
 ## Quick Setup
 
@@ -8,13 +8,13 @@
 cp .env.example .env
 ```
 
-### 2. Fill in your credentials
+### 2. Fill in your credentials (they have to be secret)
 
 ```env
 # Anthropic Claude API (for AI report generation)
 ANTHROPIC_API_KEY=sk-ant-...
 
-# Twilio (for SMS alerts — optional)
+# Twilio (for SMS alerts only — optional)
 TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN=your_auth_token_here
 TWILIO_PHONE_FROM=+1xxxxxxxxxx
@@ -56,12 +56,9 @@ GEE_PROJECT=your-gee-project-id
 
 ---
 
-## ⚠️ Security rules
+##  Security rules
 
-- **Never commit** `.env` (it is listed in `.gitignore`)
-- **Never hardcode** credentials directly in source files
 - Rotate keys regularly
-- For production: use a secrets manager (AWS Secrets Manager, HashiCorp Vault, etc.)
 
 ---
 
